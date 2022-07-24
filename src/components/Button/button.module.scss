@@ -1,0 +1,24 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/responsive';
+
+.button {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: colors.$TEXT_PRIMARY;
+  background: colors.$WHITE;
+  border-radius: 5px;
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  &.primary {
+    color: colors.$WHITE;
+    background-color: colors.$PRIMARY;
+
+    &:hover {
+      color: colors.$WHITE;
+      background: colors.$PRIMARY;
+      transition: 0.6;
+    }
+  }
+}
