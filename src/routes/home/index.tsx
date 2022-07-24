@@ -17,12 +17,12 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.tableContainer}>
-        {new Array(colCount).fill(1).map((col, i) => (
+        {new Array(rowCount).fill(1).map((row, i) => (
           // eslint-disable-next-line react/no-array-index-key
-          <div key={`col-${col}-${i}`} className={styles.tableRow}>
-            {new Array(rowCount).fill(1).map((row, j) => {
-              const rowKey = `span-${row}-${j}`
-              const curLocation = { col: i, row: j }
+          <div key={`col-${row}-${i}`} className={styles.tableRow}>
+            {new Array(colCount).fill(1).map((col, j) => {
+              const rowKey = `span-${col}-${j}`
+              const curLocation = { row: i, col: j }
               const isCheck =
                 randLocation.filter((item) => JSON.stringify(curLocation) === JSON.stringify(item)).length !== 0
               return (

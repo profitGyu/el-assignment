@@ -7,7 +7,7 @@ const MakeRandomLocation = (randCol: number, randRow: number) => {
     const col = Math.floor(Math.random() * randCol)
     const row = Math.floor(Math.random() * randRow)
 
-    result.push({ col, row })
+    result.push({ row, col })
   }
   return result
 }
